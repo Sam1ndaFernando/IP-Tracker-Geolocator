@@ -16,7 +16,7 @@ public class App extends Application {
         stg = stage;
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("/fx/enter.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 600, 400);
-        stg.setTitle("GeoSpotter");
+        stg.setTitle("GeoLocator");
         stg.setScene(scene);
         stg.show();
     }
