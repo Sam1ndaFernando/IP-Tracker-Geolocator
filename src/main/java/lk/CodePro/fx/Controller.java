@@ -14,29 +14,26 @@ import lk.CodePro.functionality.GeoIp;
 import java.io.IOException;
 
 public class Controller {
-
     @FXML
     private TextField txtField;
-
     @FXML
     private TextArea txtArea;
-
     @FXML
     private Button searchBtn, cleanBtn, copyBtn, getIpBtn, ipTrackerBtn, backBtn;
-
     @FXML
     private ImageView copiedImg, logo;
+
+
 
     public void searchIp(ActionEvent event) {
         GeoIp geoip = new GeoIp();
 
         if (!geoip.checkIp(txtField.getText())) {
-            txtArea.setText("You must enter a valid IP Adress.");
+            txtArea.setText("You must enter a valid IP Address.");
         } else {
-            geoip.ipAdress(txtField.getText(), txtArea);
+            geoip.ipAddress(txtField.getText(), txtArea);
         }
     }
-
 
     public void getIp(ActionEvent event) {
         GeoIp geoip = new GeoIp();
@@ -54,7 +51,6 @@ public class Controller {
     public void copyInfo() {
         Clipboard clipboard = Clipboard.getSystemClipboard();
         ClipboardContent content = new ClipboardContent();
-
         GeoIp geoip = new GeoIp();
 
         content.putString(txtArea.getText());
@@ -85,7 +81,6 @@ public class Controller {
         }
     }
 
-
     public void backButton() {
         App app = new App();
 
@@ -99,11 +94,8 @@ public class Controller {
 
     public void copied() {
         Delay delay = new Delay();
-
         copiedImg.setVisible(true);
-
         delay.copiedDelay(3000, copiedImg);
     }
 
 }
-
