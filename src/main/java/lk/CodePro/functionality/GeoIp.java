@@ -44,17 +44,16 @@ public class GeoIp {
             double latitude = location.getLatitude();
             double longitude = location.getLongitude();
 
-            // Fetch additional information based on the country code
+
             Locale locale = new Locale("", countryCode);
-            String countryCapital = "Unknown"; // You might need another source to get the actual capital
+            String countryCapital = "Unknown";
             String timeZone = location.getTimeZone();
             Currency currency = Currency.getInstance(locale);
             String currencyCode = currency.getCurrencyCode();
             String currencyName = currency.getDisplayName();
 
-            // Additional information (requires external sources for accuracy)
-            String countryArea = "Unknown"; // Need external data source
-            String countryPopulation = "Unknown"; // Need external data source
+            String countryArea = "Unknown";
+            String countryPopulation = "Unknown";
             String network = ipAddress.getHostAddress();
             String version = ipAddress instanceof java.net.Inet4Address ? "IPv4" : "IPv6";
 
@@ -67,11 +66,11 @@ public class GeoIp {
                             "Region: " + regionName + "\n" +
                             "Region Code: " + regionCode + "\n" +
                             "Postal Code: " + postalCode + "\n" +
-                            "Capital: " + countryCapital + "\n" +
+//                            "Capital: " + countryCapital + "\n" +
                             "Timezone: " + timeZone + "\n" +
                             "Currency: " + currencyName + " (" + currencyCode + ")" + "\n" +
-                            "Country Area: " + countryArea + "\n" +
-                            "Country Population: " + countryPopulation + "\n" +
+//                            "Country Area: " + countryArea + "\n" +
+//                            "Country Population: " + countryPopulation + "\n" +
                             "Network: " + network + "\n" +
                             "Version: " + version + "\n" +
                             "Latitude: " + latitude + "\n" +
