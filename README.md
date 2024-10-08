@@ -16,7 +16,7 @@ The **IP-Tracker Geolocator** is a Java application featuring a **JavaFX** graph
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your/repository.git
+   git clone https://github.com/Sam1ndaFernando/IP-Tracker-Geolocator.git
    cd IP-Tracker-Geolocator
    
 2. **Download the GeoLite2-City.mmdb** database from MaxMind.
